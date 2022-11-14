@@ -113,23 +113,11 @@ def construct_TEI(pickled_file: Union[str, Path], out_file: Union[str, Path],
     from xml.etree.ElementTree import XML, Element, SubElement, tostring
     merged = pd.read_pickle(pickled_file)
     def get_who_field(row) -> str:
-        if pd.isna(row["lastname"]):
-            return "#Unknown"
         try:
-            lastname = "".join(row["lastname"].split())
-            firstname = "".join(row["firstname"].split())
-            return f"#{lastname}{firstname}"
+            return "#"+"".join(row["Speaker_name"].replace(",", "").split())
         except:
-            try:
-                lastname = row["Speaker_name"].split(",")[0]
-                firstname = row["Speaker_name"].split(",")[1]
-                lastname = "".join(lastname.split())
-                firstname = "".join(firstname.split())
-                return f"#{drop_punctuation(lastname)}{drop_punctuation(firstname)}"
-            except:
-                print("Getting errors for ", row["Speaker_name"], row["lastname"], row["firstname"])
-                return "#Unknown"
-                # return f"#ErrorError:{row['Speaker_name']=},{row['lastname']=},{row['firstname']=}"
+            print("Getting errors for ", row["Speaker_name"], row["lastname"], row["firstname"])
+            return "#Unknown"
                 
 
     def get_ana_field(row) -> str:
