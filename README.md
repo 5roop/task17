@@ -20,3 +20,8 @@ Sentence splitting is done with `HR` (Note from 2022-11-14T10:49:21: Nikola says
 Notable transcriber notes:
 * `Hoćemo li ponoviti? ____________(?) /nije uključen mikrofon/`
 * ` /PAUZA/`
+* `/INTONIRANJE HIMNE/`
+
+## 2022-11-14T14:46:25
+
+The dates of terms are not easily accessible. I again opted for extracting min-max dates from the metadata I have in its stead.
