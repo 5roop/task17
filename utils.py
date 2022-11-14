@@ -71,7 +71,7 @@ def prepare_interim_files(
     metadf = parse_meta_file(meta_path)
 
     metatextdf = textdf.merge(metadf, on="ID")
-    metatextdf["term2"] = int(xmlid)
+    metatextdf["term2"] = metatextdf.Term
 
     alldatamerged = metatextdf.merge(mpdf,
                                      how="left",
@@ -354,7 +354,7 @@ def construct_TEI(pickled_file: Union[str, Path], out_file: Union[str, Path],
     </revisionDesc>
 </teiHeader>"""
 
- stringheader_ba = f"""
+    stringheader_ba = f"""
 <teiHeader>
     <fileDesc>
         <titleStmt>
