@@ -25,3 +25,16 @@ Notable transcriber notes:
 ## 2022-11-14T14:46:25
 
 The dates of terms are not easily accessible. I again opted for extracting min-max dates from the metadata I have in its stead.
+
+
+## 2022-11-15T15:13:17
+
+It seems there are a plethora of people in the data which I do not know anything (i.e., they are not in MP file.) As with HR I will add them manually with no additional information.
+
+There are also two non-human names; `#External` and `#Protocol`. These are present from the original data forward. I think I will just inhibit this problem on the TEI component level with sed, sth like
+
+```shell
+sed -i 's/<u who="#Protocol"/<u/g' $file
+```
+
+For the speakers, presumed to be human (e.g. DžonsonRasel(lord)) I will preserve the names given in the metadata, meaning that I will have to input them in the root TEI.
