@@ -116,8 +116,11 @@ def construct_TEI(pickled_file: Union[str, Path], out_file: Union[str, Path],
         try:
             return "#"+"".join(row["Speaker_name"].replace(",", "").split())
         except:
-            print("Getting errors for ", row["Speaker_name"], row["lastname"], row["firstname"])
-            return "#Unknown"
+            try:
+                return "".join(("#"+row["lastname"]+row[f"firstname"]).split())
+            except:
+                print("Getting errors for ", row["Speaker_name"], row["lastname"], row["firstname"])
+                return "#Unknown"
                 
 
     def get_ana_field(row) -> str:
@@ -470,7 +473,7 @@ def construct_TEI(pickled_file: Union[str, Path], out_file: Union[str, Path],
     current_u_n = 0
     title = None
     word_count = 0
-    for i, row in merged.iterrows():
+    for i, row in merged.drop_duplicates(subset=[i for i in merged.columns if i != "sentences"]).iterrows():
         if len(row["sentences"]) == 0:
             continue
         u = SubElement(div, "u")
