@@ -436,7 +436,7 @@ def construct_TEI(pickled_file: Union[str, Path], out_file: Union[str, Path],
             <name type="address">Trg BiH 1</name>
             <name type="city">Sarajevo</name>
             <name type="country" key="BA">Bosnia and Herzegovina</name>
-
+            <date from="1998-11-26" to="2022-07-27">1998-11-26  -  2022-07-27</date>
             </setting>
         </settingDesc>
     </profileDesc>
