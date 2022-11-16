@@ -1,0 +1,101 @@
+INFO: Validating directory /home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA
+INFO: Validating TEI root /home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA.xml
+INFO: XML validation for ParlaMint-BA.xml
+/home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA.xml:1521:43: error: value of attribute "xml:id" is invalid; must be an XML name without colons
+/home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA.xml:1787:37: error: value of attribute "xml:id" is invalid; must be an XML name without colons
+/home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA.xml:7489:42: error: ID "Marinković-LepićMirjana" has already been defined
+/home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA.xml:1808:42: error: first occurrence of ID "Marinković-LepićMirjana"
+/home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA.xml:7601:43: error: ID "Novaković-BursaćSnježana" has already been defined
+/home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA.xml:2746:43: error: first occurrence of ID "Novaković-BursaćSnježana"
+INFO: Content validaton for ParlaMint-BA.xml
+INFO: particDesc content validaton for ParlaMint-BA.xml
+INFO[10] : Total number of affiliations with government.BA: 0
+ERROR[10] : government-role organisation without affiliation: #government.BA
+INFO[10] : Total number of affiliations with PS: 402
+INFO[10] : Total number of affiliations with DNZ_BiH: 5
+INFO[10] : Total number of affiliations with HDZ_BiH: 40
+INFO[10] : Total number of affiliations with KCD_BiH: 17
+INFO[10] : Total number of affiliations with NHI-HKDU: 1
+INFO[10] : Total number of affiliations with RSRS: 1
+INFO[10] : Total number of affiliations with SDP_BiH: 47
+INFO[10] : Total number of affiliations with SDS: 39
+INFO[10] : Total number of affiliations with Sloga: 4
+INFO[10] : Total number of affiliations with SD_BiH: 2
+INFO[10] : Total number of affiliations with SRSRS: 4
+INFO[10] : Total number of affiliations with BPS: 2
+INFO[10] : Total number of affiliations with DSP_BiH: 1
+INFO[10] : Total number of affiliations with K-SNSD: 1
+INFO[10] : Total number of affiliations with NHI: 3
+INFO[10] : Total number of affiliations with PDP: 13
+INFO[10] : Total number of affiliations with SBiH: 26
+INFO[10] : Total number of affiliations with SDA: 71
+INFO[10] : Total number of affiliations with SNS: 2
+INFO[10] : Total number of affiliations with SPRS: 4
+INFO[10] : Total number of affiliations with BOSS: 1
+INFO[10] : Total number of affiliations with EB: 1
+INFO[10] : Total number of affiliations with SDUBiH: 1
+INFO[10] : Total number of affiliations with SNSD: 43
+INFO[10] : Total number of affiliations with SPUBiH: 1
+INFO[10] : Total number of affiliations with DNS: 7
+INFO[10] : Total number of affiliations with HZ: 0
+WARN[10] : parliamentaryGroup-role organisation without affiliation: #HZ
+INFO[10] : Total number of affiliations with HDZ-HK-HNZ: 3
+INFO[10] : Total number of affiliations with NS_RB: 3
+INFO[10] : Total number of affiliations with HK: 0
+WARN[10] : parliamentaryGroup-role organisation without affiliation: #HK
+INFO[10] : Total number of affiliations with SBB: 11
+INFO[10] : Total number of affiliations with A-SDA: 2
+INFO[10] : Total number of affiliations with DF: 9
+INFO[10] : Total number of affiliations with HDZ_1990: 7
+INFO[10] : Total number of affiliations with Koalicija: 13
+INFO[10] : Total number of affiliations with PDP-NDP: 1
+INFO[10] : Total number of affiliations with NS: 2
+INFO[10] : Total number of affiliations with NB: 1
+INFO[10] : Total number of affiliations with PDA: 1
+INFO[10] : Total number of affiliations with SP: 1
+INFO[10] : Total number of affiliations with party.NEZAVISNI: 0
+WARN[10] : parliamentaryGroup-role organisation without affiliation: #party.NEZAVISNI
+INFO[10] : Total number of affiliations with party.HSS: 0
+WARN[10] : parliamentaryGroup-role organisation without affiliation: #party.HSS
+INFO[10] : Total number of affiliations with party.GDS: 0
+WARN[10] : parliamentaryGroup-role organisation without affiliation: #party.GDS
+INFO[10] : Total number of affiliations with party.BSP: 0
+WARN[10] : parliamentaryGroup-role organisation without affiliation: #party.BSP
+WARN[13] : Event #PS.3 (2000-12-29T00:00:00 ...  2002-10-01T23:59:59) corresponding to affiliation don't cover affiliation date 2018-12-06T00:00:00
+WARN[13] : Event #PS.3 (2000-12-29T00:00:00 ...  2002-10-01T23:59:59) corresponding to affiliation don't cover affiliation date 2022-07-27T23:59:59
+WARN[13] : Event #PS.5 (2006-11-20T00:00:00 ...  2010-09-01T23:59:59) corresponding to affiliation don't cover affiliation date 2002-12-03T00:00:00
+WARN[13] : Event #PS.5 (2006-11-20T00:00:00 ...  2010-09-01T23:59:59) corresponding to affiliation don't cover affiliation date 2006-09-20T23:59:59
+WARN[13] : Event #PS.3 (2000-12-29T00:00:00 ...  2002-10-01T23:59:59) corresponding to affiliation don't cover affiliation date 1998-11-26T00:00:00
+WARN[13] : Event #PS.3 (2000-12-29T00:00:00 ...  2002-10-01T23:59:59) corresponding to affiliation don't cover affiliation date 2000-10-23T23:59:59
+WARN[13] : Event #PS.7 (2014-12-09T00:00:00 ...  2018-09-17T23:59:59) corresponding to affiliation don't cover affiliation date 2010-11-30T00:00:00
+WARN[13] : Event #PS.7 (2014-12-09T00:00:00 ...  2018-09-17T23:59:59) corresponding to affiliation don't cover affiliation date 2014-09-25T23:59:59
+WARN[13] : Event #PS.7 (2014-12-09T00:00:00 ...  2018-09-17T23:59:59) corresponding to affiliation don't cover affiliation date 2010-11-30T00:00:00
+WARN[13] : Event #PS.7 (2014-12-09T00:00:00 ...  2018-09-17T23:59:59) corresponding to affiliation don't cover affiliation date 2014-09-25T23:59:59
+WARN[13] : Event #PS.8 (2018-12-06T00:00:00 ...  2022-07-27T23:59:59) corresponding to affiliation don't cover affiliation date 2014-12-09T00:00:00
+WARN[13] : Event #PS.8 (2018-12-06T00:00:00 ...  2022-07-27T23:59:59) corresponding to affiliation don't cover affiliation date 2018-09-17T23:59:59
+INFO[12] : Total number of organizations with parliament role: 1
+INFO[12] : Total number of organizations with government role: 1
+INFO[12] : Total number of organizations with parliamentaryGroup role: 43
+INFO[??] : Total number of affiliations 793
+INFO[??] : Total number of NO-role affiliations 0
+INFO[??] : Total number of 'member' role affiliations 793
+INFO: Link checking for ParlaMint-BA.xml
+ERROR ParlaMint-BA: ERROR: Can't find local id for meeting/@ana="#parla.term #PS.9"
+ERROR ParlaMint-BA: ERROR: Can't find local id for meeting/@ana="#parla.term #PS.10"
+ERROR ParlaMint-BA: ERROR: Can't find local id for meeting/@ana="#parla.term #PS.11"
+ERROR ParlaMint-BA: ERROR: Can't find local id for meeting/@ana="#parla.term #PS.12"
+INFO: Validating component TEI file /home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA_T02S01.xml
+INFO: XML validation for ParlaMint-BA_T02S01.xml
+/home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA_T02S01.xml:99:15: error: element "setting" incomplete; missing required element "date"
+INFO: Content validaton for ParlaMint-BA_T02S01.xml
+INFO: Link checking for ParlaMint-BA_T02S01.xml
+INFO: Validating component TEI file /home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA_T02S02.xml
+INFO: XML validation for ParlaMint-BA_T02S02.xml
+/home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA_T02S02.xml:99:15: error: element "setting" incomplete; missing required element "date"
+INFO: Content validaton for ParlaMint-BA_T02S02.xml
+INFO: Link checking for ParlaMint-BA_T02S02.xml
+INFO: Validating component TEI file /home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA_T02S03.xml
+INFO: XML validation for ParlaMint-BA_T02S03.xml
+/home/rupnik/parlamint/ParlaMint/Data/ParlaMint-BA/ParlaMint-BA_T02S03.xml:99:15: error: element "setting" incomplete; missing required element "date"
+INFO: Content validaton for ParlaMint-BA_T02S03.xml
+INFO: Link checking for ParlaMint-BA_T02S03.xml

@@ -38,3 +38,15 @@ sed -i 's/<u who="#Protocol"/<u/g' $file
 ```
 
 For the speakers, presumed to be human (e.g. DžonsonRasel(lord)) I will preserve the names given in the metadata, meaning that I will have to input them in the root TEI.
+
+I found that for Term 8 I simply do not have MPs with assigned codemps. I will impute this as best I can, and with irritated humours.
+
+## 2022-11-15T18:36:16
+
+Upon further investigation it was discovered that not only `#External` and `#Protocol` are missing. Newly found problematic references are also `#Predstavnik`, `#Podnositeljizvješća`, `#Poslanice`, `#Poslanici`, `#Prijedlogrezolucije`, `#Ministarstvo`, `#Predstavnikministarstva` `#Delegati`. There is also a two people portmanteau: `#LučićMiloš;JovićNedeljko` and even `#OlsunBajmarŠerifMubarek` [sic! Nta `Bajmar`]...
+
+
+
+
+
+
