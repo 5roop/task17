@@ -73,35 +73,35 @@ def prepare_interim_files(
     metatextdf = textdf.merge(metadf, on="ID")
     metatextdf["term2"] = metatextdf.Term
 
-    alldatamerged = metatextdf.merge(mpdf,
-                                     how="left",
-                                     left_on=["term2", "Codemp"],
-                                     right_on=["term2", "codemp"]
-                                     ).merge(partiesdf,
-                                             how="left",
-                                             left_on=["term2", "party"],
-                                             right_on=["term2", "party"]
-                                             )
+    alldatamerged = metatextdf#.merge(mpdf,
+                                    #  how="left",
+                                    #  left_on=["term2", "Codemp"],
+                                    #  right_on=["term2", "codemp"]
+                                    #  ).merge(partiesdf,
+    #                                          how="left",
+    #                                          left_on=["term2", "party"],
+    #                                          right_on=["term2", "party"]
+    #                                          )
     tqdm.pandas()
     alldatamerged["sentences"] = alldatamerged.Text.progress_apply(
         split_sentences)
 
-    to_categ = ['ID', 'Title', 'From', 'To', 'House', 'Term', 'Session',
-                'Meeting', 'Sitting', 'Agenda', 'Subcorpus', 'Speaker_role',
-                'Speaker_type', 'Speaker_party', 'Speaker_party_name', 'Party_status',
-                'Speaker_name', 'Speaker_gender', 'Speaker_birth', 'Codemp',
-                'Codeparty', 'term2', 'codemp', 'order_id', 'term1_x', 'term_id',
-                'type_of_list', 'fullname', 'firstname', 'lastname', 'party',
-                'date_of_birth', 'year_of_birth', 'gender', 'place_of_birth',
-                'field_of_study', 'education_y', 'constituency', 'bp_lat', 'bp_lon',
-                'codeparty', 'term1_y', 'full_name', 'established', 'chairman',
-                'ideology_LR', 'party_family', 'election_result', 'no_seats',
-                'coalition', 'coalition_composition', 'ruling']
-    for c in to_categ:
-        try:
-            alldatamerged[c] = pd.Categorical(alldatamerged[c])
-        except:
-            pass
+    # to_categ = ['ID', 'Title', 'From', 'To', 'House', 'Term', 'Session',
+    #             'Meeting', 'Sitting', 'Agenda', 'Subcorpus', 'Speaker_role',
+    #             'Speaker_type', 'Speaker_party', 'Speaker_party_name', 'Party_status',
+    #             'Speaker_name', 'Speaker_gender', 'Speaker_birth', 'Codemp',
+    #             'Codeparty', 'term2', 'codemp', 'order_id', 'term1_x', 'term_id',
+    #             'type_of_list', 'fullname', 'firstname', 'lastname', 'party',
+    #             'date_of_birth', 'year_of_birth', 'gender', 'place_of_birth',
+    #             'field_of_study', 'education_y', 'constituency', 'bp_lat', 'bp_lon',
+    #             'codeparty', 'term1_y', 'full_name', 'established', 'chairman',
+    #             'ideology_LR', 'party_family', 'election_result', 'no_seats',
+    #             'coalition', 'coalition_composition', 'ruling']
+    # for c in to_categ:
+    #     try:
+    #         alldatamerged[c] = pd.Categorical(alldatamerged[c])
+    #     except:
+    #         pass
     alldatamerged.to_pickle(out_file)
 
 
@@ -116,6 +116,7 @@ def construct_TEI(pickled_file: Union[str, Path], out_file: Union[str, Path],
         try:
             return "#"+"".join(row["Speaker_name"].replace(",", "").split())
         except:
+            return "#Unknown"
             try:
                 return "".join(("#"+row["lastname"]+row[f"firstname"]).split())
             except:
@@ -473,7 +474,8 @@ def construct_TEI(pickled_file: Union[str, Path], out_file: Union[str, Path],
     current_u_n = 0
     title = None
     word_count = 0
-    for i, row in merged.drop_duplicates(subset=[i for i in merged.columns if i != "sentences"]).iterrows():
+    IDs = merged.ID.unique()
+    for i, row in merged.drop_duplicates(subset=["ID", "Text"]).iterrows():
         if len(row["sentences"]) == 0:
             continue
         u = SubElement(div, "u")
